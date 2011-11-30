@@ -33,12 +33,13 @@ snippet fapi
 		'#description' => t('${3:short description}'),
 		'#default_value' => '${4:default value}',
 	);
+	$5
 
 
 snippet fapi_actions
 	$form[${1:name}] = array(
 		'#type' => 'actions'
-		//'#attributes' => array('class' => array('class_name')),
+		//'#attributes' => array('class' => array('class_name')),$5
 	);
 
 
@@ -48,6 +49,7 @@ snippet fapi_button
 		'#value' => t('${2:Button Label}'),
 		'#description' => '${3:short description}',
 	);
+	$4
 
 snippet fapi_checkbox
 	$form[${1:name}] = array(
@@ -57,6 +59,7 @@ snippet fapi_checkbox
 		//'#default_value' => 'checked',
 		//'#return' => 1,
 	);
+	$4
 
 snippet fapi_checkboxes
 	$form[${1:name}] = array(
@@ -69,12 +72,14 @@ snippet fapi_checkboxes
 		//'#default_value' => 'option_key', // A key from #options
 		//'#tree' => TRUE,
 	);
+	$5
 
 snippet fapi_container
 	$form[${1:name}] = array(
 		'#type' => 'container',
 		//'#attributes' => array('class' => array('class_name')),
 	);
+	$2
 
 
 snippet fapi_date
@@ -84,6 +89,7 @@ snippet fapi_date
 		'#description' => t('${3:short description}'),
 		//'#default_value' => NOW,
 	);
+	$4
 
 
 snippet fapi_fieldset
@@ -95,6 +101,7 @@ snippet fapi_fieldset
 		'#collapsible' => FALSE,
 		//'#group' => 'group_name', //for vertical tab grouping.
 	);
+	$4
 
 
 snippet fapi_file
@@ -104,15 +111,17 @@ snippet fapi_file
 		'#description' => t('${3:short description}'),
 		'#size' => ${4:60},
 	);
+	$5
 
 snippet fapi_form
 	$form = array(
-		'#method' => 'post',
+		'#method' => '${1:post}',
 		'#action' => request_uri(),
 		//'#process' =>
 		//'#submit' => array('some_callback'),
 		//'#validate' => array('some_validate_callback'),
 	);
+	$2
 
 
 snippet fapi_hidden
@@ -120,6 +129,7 @@ snippet fapi_hidden
 		'#type' => 'hidden',
 		'#value' => ${2:'some value'},
 	);
+	$3
 
 
 snippet fapi_imagebutton
@@ -127,7 +137,7 @@ snippet fapi_imagebutton
 		'#type' => 'imagebutton',
 		'#src' => ${2:'someURL'},
 	);
-
+	$3
 
 snippet fapi_item
 	$form[${1:name}] = array(
@@ -135,6 +145,7 @@ snippet fapi_item
 		'#title' => t('${2:title}')
 		'#markup' => ${3:'html'},
 	);
+	$4
 
 
 snippet fapi_machine_name
@@ -151,6 +162,7 @@ snippet fapi_machine_name
 			// 'replace' => '_',
 		),
 	);
+	$6
 
 
 snippet fapi_managed_file
@@ -164,12 +176,14 @@ snippet fapi_managed_file
 		//'#progress_indicator' => 'throbber', // 'none', 'bar',
 		// '#default_value' => 'some_default_value',
 	);
+	$4
 
 
 snippet fapi_markup
 	$form[${1:name}] = array(
 		'#markup' => ${2:'Some markup'},
 	);
+	$3
 
 
 snippet fapi_password
@@ -180,6 +194,7 @@ snippet fapi_password
 		'#size' => ${4:15},
 		'#maxlength' => ${5:64},
 	);
+	$6
 
 
 snippet fapi_password_confirm
@@ -189,7 +204,7 @@ snippet fapi_password_confirm
 		'#description' => t('${3:short description}'),
 		'#size' => ${4:15},
 	);
-
+	$5
 
 snippet fapi_radio
 	$form[${1:name}] = array(
@@ -198,6 +213,7 @@ snippet fapi_radio
 		'#description' => t('${3:short description}'),
 		'#default_value' => ${4:'some_default_value'},
 	);
+	$5
 
 
 snippet fapi_radios
@@ -210,6 +226,7 @@ snippet fapi_radios
 		)
 		'#default_value' => ${7:'some_option_name'},
 	);
+	$8
 
 
 snippet fapi_select
@@ -222,6 +239,7 @@ snippet fapi_select
 		)
 		'#default_value' => ${7:'some_option_name'},
 	);
+	$8
 
 
 snippet fapi_submit
@@ -229,6 +247,7 @@ snippet fapi_submit
 		'#type' => 'submit',
 		'#value' => t('${2:Submit}'),
 	);
+	$3
 
 
 snippet fapi_tableselect
@@ -239,6 +258,7 @@ snippet fapi_tableselect
 		'#options' => ${3: $rows},
 		// '#multiple' => TRUE,
 	);
+	$4
 
 
 snippet fapi_text_format
@@ -249,6 +269,7 @@ snippet fapi_text_format
 		'#format' => ${4:'format_name'}, //Default format is NULL.$5
 		//'#base_type' => 'textarea', //'text',
 	);
+	$5
 
 
 snippet fapi_textarea
@@ -261,6 +282,7 @@ snippet fapi_textarea
 		// '#default_value' => 'some_value',
 		// '#resizeable' => TRUE,
 	);
+	$6
 
 
 snippet fapi_textfield
@@ -272,6 +294,7 @@ snippet fapi_textfield
 		'#maxlength' => ${5:128},$6
 		//'#default_value' => 'some string',
 	);
+	$6
 
 
 snippet fapi_value
@@ -285,6 +308,7 @@ snippet fapi_vertical_tabs
 	$form[${1:name}] = array(
 		'#type' => 'vertical_tabs',
 	);
+	$2
 
 
 snippet fapi_weight
@@ -294,6 +318,7 @@ snippet fapi_weight
 		'#description' => t('${3:short description}'),
 		'#delta' => ${4:10}, // The absolute value of the top of the range.
 	);
+	$5
 
 # DRUPAL 7 Hooks
 snippet form_id_alter
