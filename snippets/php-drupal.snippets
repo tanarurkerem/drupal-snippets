@@ -16,24 +16,22 @@ snippet watchd
 	watchdog('${1:module}', '${2:Got here}');
 
 snippet watchdog NOTICE
-	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:NOTICE});
+	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:NOTICE});$4
 
 snippet watchdog WARNING
-	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:WARNING});
+	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:WARNING});$4
 
 snippet watchdoc ERROR
-	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:ERROR});
+	watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTION__}), WATCHDOG_${4:ERROR});$4
 
 snippet dsm
-	drupal_set_message(${1:'Got here!'}, 'status');
+	drupal_set_message(${1:'Got here!'}, 'status');$2
 
 snippet ddump
-	drupal_set_message('<pre class="ddump">' . print_r(${1:$someVar}, TRUE) . '</pre>');
+	drupal_set_message('<pre class="ddump">' . print_r(${1:$someVar}, TRUE) . '</pre>');$2
 
 snippet jdump
-	drupal_set_message('<script>if (Console.log) Console.log(' . json_encode(${1:$someVar}) . ');</script>');
-
-snippet hook_block_info
+	drupal_set_message('<script>if (Console.log) Console.log(' . json_encode(${1:$someVar}) . ');</script>');$2
 
 # For the t() function, the php.snippet that ships with snipMate defines
 # a t target that (unfortunately) expands to a ternary. We try to override, 
@@ -41,11 +39,14 @@ snippet hook_block_info
 
 # Override the really annoying php.snippets ternary.
 snippet t
-	t('${1:msg}');
+	t('${1:msg}')
 
 # If php snippet is loaded last, we need to have a second target for t().
-snippet tt
-	t('${1:msg}'${3:, array($2)});
+snippet tt short
+	t('${1:msg}')
+
+snippet tt substitutions
+	t('${1:With %foo}', array(${2:'%foo' => 'bar'}))
 
 # FAPI for Drupal 7
 # form item
