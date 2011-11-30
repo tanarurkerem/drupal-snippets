@@ -5,15 +5,17 @@ coding Drupal modules and themes.
 
 ## REQUIRED
 
-  pathogen https://github.com/tpope/vim-pathogen
-  snipMate fork made by garbas https://github.com/garbas/vim-snipmate
+  * pathogen https://github.com/tpope/vim-pathogen
+  * snipMate fork made by garbas https://github.com/garbas/vim-snipmate
 
 ## INSTALL
 
   clone repo in to the ~/.vim/bundle directory
 
+  ^^^bash
      cd ~/.vim/bundle
      git clone git://github.com/tanarurkerem/drupal-snippets.git
+  ^^^
 
 ## USAGE
 
