@@ -16,6 +16,278 @@ snippet fi
 		'#title' => t('${4}'),
 		'#default_value' => ${5},${6}
 	);
+
+# FAPI for Drupal 7
+
+snippet fapi
+	// See http://lb.cm/49B
+	$form[${1:name}] = array(
+		'#type' => '${2:markup}',
+		'#description' => t('${3:short description}'),
+		'#default_value' => '${4:default value}',
+	);
+
+
+snippet fapi_actions
+	$form[${1:name}] = array(
+		'#type' => 'actions'
+		//'#attributes' => array('class' => array('class_name')),
+	);
+
+
+snippet fapi_button
+	$form[${1:name}] = array(
+		'#type' => 'button',
+		'#value' => t('${2:Button Label}'),
+		'#description' => '${3:short description}',
+	);
+
+snippet fapi_checkbox
+	$form[${1:name}] = array(
+		'#type' => 'checkbox',
+		'#title' => t('${2:Checkbox Title}'}),
+		'#description' => '${3:Short description}',
+		//'#default_value' => 'checked',
+		//'#return' => 1,
+	);
+
+snippet fapi_checkboxes
+	$form[${1:name}] = array(
+		'#type' => 'checkboxes',
+		'#title' => t('${2:Checkbox Title}'}),
+		'#description' => t('${3:Short description}'),
+		'#options' => array(
+			'${4:return_value} => t('${4:Label}'),
+		)
+		//'#default_value' => 'option_key', // A key from #options
+		//'#tree' => TRUE,
+	);
+
+snippet fapi_container
+	$form[${1:name}] = array(
+		'#type' => 'container',
+		//'#attributes' => array('class' => array('class_name')),
+	);
+
+
+snippet fapi_date
+	$form[${1:name}] = array(
+		'#type' => 'date',
+		'#title' = t('${2:title}'),
+		'#description' => t('${3:short description}'),
+		//'#default_value' => NOW,
+	);
+
+
+snippet fapi_fieldset
+	$form[${1:name}] = array(
+		'#type' => 'fieldset',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#collapsed' => FALSE,
+		'#collapsible' => FALSE,
+		//'#group' => 'group_name', //for vertical tab grouping.
+	);
+
+
+snippet fapi_file
+	$form[${1:name}] = array(
+		'#type' => 'file',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#size' => ${4:60},
+	);
+
+snippet fapi_form
+	$form = array(
+		'#method' => 'post',
+		'#action' => request_uri(),
+		//'#process' =>
+		//'#submit' => array('some_callback'),
+		//'#validate' => array('some_validate_callback'),
+	);
+
+
+snippet fapi_hidden
+	$form[${1:name}] = array(
+		'#type' => 'hidden',
+		'#value' => ${2:'some value'},
+	);
+
+
+snippet fapi_imagebutton
+	$form[${1:name}] = array(
+		'#type' => 'imagebutton',
+		'#src' => ${2:'someURL'},
+	);
+
+
+snippet fapi_item
+	$form[${1:name}] = array(
+		'#type' => 'item',
+		'#title' => t('${2:title}')
+		'#markup' => ${3:'html'},
+	);
+
+
+snippet fapi_machine_name
+	$form[${1:name}] = array(
+		'#type' => 'machine_name',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#default_value' => ${4:'some_machine_name'},
+		'#machine_name' = array(
+			'exists' => '${5:some_callback}',
+			// 'source' => array('name'),
+			// 'label' => t('Some label'),
+			// 'replace_pattern' => '[^a-z0-9_]+',
+			// 'replace' => '_',
+		),
+	);
+
+
+snippet fapi_managed_file
+	$form[${1:name}] = array(
+		'#type' => 'managed_file',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#upload_location' => 'public://files',
+		//'#upload_validators' => array('callbacks'),
+		//'#progress_message' => t('some progress message'),
+		//'#progress_indicator' => 'throbber', // 'none', 'bar',
+		// '#default_value' => 'some_default_value',
+	);
+
+
+snippet fapi_markup
+	$form[${1:name}] = array(
+		'#markup' => ${2:'Some markup'},
+	);
+
+
+snippet fapi_password
+	$form[${1:name}] = array(
+		'#type' => 'password',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#size' => ${4:15},
+		'#maxlength' => ${5:64},
+	);
+
+
+snippet fapi_password_confirm
+	$form[${1:name}] = array(
+		'#type' => 'password_confirm',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#size' => ${4:15},
+	);
+
+
+snippet fapi_radio
+	$form[${1:name}] = array(
+		'#type' => 'radio',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#default_value' => ${4:'some_default_value'},
+	);
+
+
+snippet fapi_radios
+	$form[${1:name}] = array(
+		'#type' => 'radios',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#options' => array(
+			'${4:return_value}' => t('${5:Display value}'),
+		)
+		'#default_value' => ${7:'some_option_name'},
+	);
+
+
+snippet fapi_select
+	$form[${1:name}] = array(
+		'#type' => 'select',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#options' => array(
+			'${4:return_value}' => t('${5:Display value}'),
+		)
+		'#default_value' => ${7:'some_option_name'},
+	);
+
+
+snippet fapi_submit
+	$form[${1:name}] = array(
+		'#type' => 'submit',
+		'#value' => t('${2:Submit}'),
+	);
+
+
+snippet fapi_tableselect
+	// See http://lb.cm/49X
+	$form[${1:name}] = array(
+		'#type' => 'tableselect',
+		'#header' => ${2:$headers},
+		'#options' => ${3: $rows},
+		// '#multiple' => TRUE,
+	);
+
+
+snippet fapi_text_format
+	$form[${1:name}] = array(
+		'#type' => 'text_format',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#format' => ${4:'format_name'}, //Default format is NULL.$5
+		//'#base_type' => 'textarea', //'text',
+	);
+
+
+snippet fapi_textarea
+	$form[${1:name}] = array(
+		'#type' => 'textarea',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#rows' => ${4:5},
+		'#cols' => ${5:60},$6
+		// '#default_value' => 'some_value',
+		// '#resizeable' => TRUE,
+	);
+
+
+snippet fapi_textfield
+	$form[${1:name}] = array(
+		'#type' => 'textfield',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#size' => ${4:60},
+		'#maxlength' => ${5:128},$6
+		//'#default_value' => 'some string',
+	);
+
+
+snippet fapi_value
+	$form[${1:name}] = array(
+		'#type' => 'value',
+		'#value' => ${2:'Anything in the world'},
+	);$3
+
+
+snippet fapi_vertical_tabs
+	$form[${1:name}] = array(
+		'#type' => 'vertical_tabs',
+	);
+
+
+snippet fapi_weight
+	$form[${1:name}] = array(
+		'#type' => 'weight',
+		'#title' => t('${2:title}')
+		'#description' => t('${3:short description}'),
+		'#delta' => ${4:10}, // The absolute value of the top of the range.
+	);
+
 # DRUPAL 7 Hooks
 snippet form_id_alter
 	/**
