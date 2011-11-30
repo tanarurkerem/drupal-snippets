@@ -1,5 +1,8 @@
 # Vim snippets for Drupal 7
 
+This VIM plugin provides Drupal snippets (and minimal configuration) for 
+coding Drupal modules and themes.
+
 ## REQUIRED
 
   pathogen https://github.com/tpope/vim-pathogen
