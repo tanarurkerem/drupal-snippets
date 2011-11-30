@@ -38,14 +38,16 @@ snippet jdump
 # but also provide a backup.
 
 # Override the really annoying php.snippets ternary.
-snippet t
+snippet t Drupal t().
 	t('${1:msg}')
 
 # If php snippet is loaded last, we need to have a second target for t().
-snippet tt short
-	t('${1:msg}')
+snippet tt
+	t('${1:msg}')$2
 
-snippet tt substitutions
+# For the long form, we do a longer trigger. This is because it's annoying to
+# have tt overridden. (It's easier to type t() than t<tab>1)
+snippet ttt
 	t('${1:With %foo}', array(${2:'%foo' => 'bar'}))
 
 # FAPI for Drupal 7
