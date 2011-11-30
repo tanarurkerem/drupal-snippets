@@ -1,26 +1,30 @@
-/**
- * Vim snippets for Drupal 7
- */
+ # Vim snippets for Drupal 7
 
-REQUIRED
+## REQUIRED
 
   pathogen https://github.com/tpope/vim-pathogen
   snipMate fork made by garbas https://github.com/garbas/vim-snipmate
 
-INSTALL
+## INSTALL
 
   clone repo in to the ~/.vim/bundle directory
 
      cd ~/.vim/bundle
      git clone git://github.com/tanarurkerem/drupal-snippets.git
 
-USAGE
+## USAGE
 
- - Type hook_HOOKNAME<tab> for annotated snippets, and h_HOOKNAME<tab> for the non-annotated versions.
- - Most snippets include multiple <tab> placemarks.
+ - Type hook_HOOKNAME*<tab>* for annotated snippets, and h_HOOKNAME*<tab>* for the non-annotated versions.
+ - For FAPI field types, type fapi_FIELDTYPE*<tab>*. Example:
+   `fapi_textarea` expands to a full text area definition.
+ - Various other utility functions are provided (try `watchdog`)
+ - Most snippets include multiple *<tab>* placemarks.
 
-INFO
+## INFO
 
  - Included: All 330+ Drupal 7 hooks
  - Missing: Other functions
 
+## Documentation
+
+Basic documentation is present in the `doc/` folder.
