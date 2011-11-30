@@ -4,7 +4,7 @@ if !exists('g:snipMate')
 endif
 let s:snipMate = g:snipMate
 
-let s:snipMate['scope_aliases'] = get(s:snipMate,'scope_aliases',{'php' :'drupal,php' })
+let s:snipMate['scope_aliases'] = get(s:snipMate,'scope_aliases',{'php' :'drupal,php,html,javascript' })
 
 if has("autocmd")
   " Drupal php files.
@@ -14,6 +14,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.test set filetype=php
     autocmd BufRead,BufNewFile *.inc set filetype=php
     autocmd BufRead,BufNewFile *.profile set filetype=php
+    autocmd BufRead,BufNewFile *.view set filetype=php
     autocmd BufRead,BufNewFile *.make set filetype=dmake
   augroup END
 endif
