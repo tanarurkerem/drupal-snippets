@@ -1,4 +1,4 @@
- # Vim snippets for Drupal 7
+# Vim snippets for Drupal 7
 
 ## REQUIRED
 
