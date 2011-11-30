@@ -41,11 +41,11 @@ snippet hook_block_info
 
 # Override the really annoying php.snippets ternary.
 snippet t
-	t('${1:msg}'${2:array($3)});
+	t('${1:msg}');
 
 # If php snippet is loaded last, we need to have a second target for t().
 snippet tt
-	t('${1:msg}'${2:array($3)});
+	t('${1:msg}'${3:, array($2)});
 
 # FAPI for Drupal 7
 # form item
