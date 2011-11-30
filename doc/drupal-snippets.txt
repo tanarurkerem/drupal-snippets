@@ -1,0 +1,64 @@
+*drupal-snippets.txt* Plugin providing Drupal snippets for snipMate.
+
+drupal-snippets                           *drupalSnippets*
+Last Change: November 29, 2011
+
+[drupal-snipppets-description]            Description
+[drupal-snipppets-features]               Features
+
+
+=====================================================================
+DESCRIPTION                            *drupal-snippets-description*
+
+drupal-snippets provides a number of snippets for common Drupal
+programming structures, including hooks (all 300+ core hooks from
+Drupal 7), common utility functions, and common data structures 
+such as menu items and FAPI form definitions.
+
+
+=====================================================================
+FEATURES                                   *drupal-snippets-features*
+
+There are two triggers for every hook: a succinct trigger and a 
+verbose trigger. The succinct trigger provides a minimal hook
+implementation, while a verbose trigger provides a documented,
+feature-rich hook implementation.
+
+The succinct version is always of the form h_HOOK_NAME:
+
+    h_block_view
+
+The verbose version is always of the form hook_HOOK_NAME:
+
+    hook_block_view
+
+FAPI form definitions also have triggers. Here are a few example
+FAPI triggers:
+
+    fapi
+    fapi_option
+    fapi_value
+    fapi_radios
+    fapi_textarea
+
+These generate (in order) a generic FAPI field, an option box,
+a stored value field, a set of radio buttons, and a textarea.
+
+All of the FAPI field types are represented, and the format of
+each is fapi_FIELDTYPE.
+
+Finally, there are a number of Drupal utility triggers built in:
+
+   - dsm: expands to a drupal_set_message() call.
+   - mi: expands to a menu item
+   - block_item: expands to a block item
+   - ddebug: dumps a variable directly into drupal_set_message()
+   - jdebug: serializes an object and puts it into the browser's 
+     Javascript console.
+   - watchdog: generates a watchdog log message.
+
+Other functions and triggers are added all the time.
+
+=====================================================================
+
+vim:tw=78:ts=8:ft=help:norl:
