@@ -12,10 +12,8 @@ coding Drupal modules and themes.
 
   clone repo in to the ~/.vim/bundle directory
 
-  ^^^bash
      cd ~/.vim/bundle
      git clone git://github.com/tanarurkerem/drupal-snippets.git
-  ^^^
 
 ## USAGE
 
