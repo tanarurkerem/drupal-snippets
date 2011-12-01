@@ -38,6 +38,48 @@ snippet block_item
 		// 'pages' => $pages_string,
 	);
 
+# Get files started
+snippet newinfo
+	name = ${1:Pretty Name}
+	description = ${2:Description}
+	core = 7.x
+	;php = 5.2
+	;package = Custom
+	;dependencies[] = libraries
+	;files[] = `Filename`.admin.inc
+	;files[] = `Filename`.classes.inc
+	;files[] = `Filename`.theme.inc
+	;files[] = `Filename`.admin.inc
+	;files[] = `Filename`.pages.inc
+
+snippet newmod
+	/**
+	 * @file
+	 * The `Filename()` module.
+	 */
+
+	/**
+	 * Implements hook_help().
+	 */
+	function `Filename()`_help($path, $arg) {
+	  switch ($path) {
+	    case 'admin/help#`Filename()`':
+	      return '<p>' . t('${1: A module.}') . '</p>';
+	  }
+	}
+
+snippet newinstall
+	/**
+	 * @file
+	 * The installer for `Filename()`.
+	 */
+
+	/**
+	 * Implements hook_install().
+	 */
+	function `Filename()`_install() {
+	  ${1:/* Your code here */}
+	}
 # Conveninece functions for Drupal 7
 
 snippet watchd
