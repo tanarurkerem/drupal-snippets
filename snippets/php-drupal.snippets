@@ -38,21 +38,8 @@ snippet block_item
 		// 'pages' => $pages_string,
 	);
 
-# Get files started
-snippet newinfo
-	name = ${1:Pretty Name}
-	description = ${2:Description}
-	core = 7.x
-	;php = 5.2
-	;package = Custom
-	;dependencies[] = libraries
-	;files[] = `Filename`.admin.inc
-	;files[] = `Filename`.classes.inc
-	;files[] = `Filename`.theme.inc
-	;files[] = `Filename`.admin.inc
-	;files[] = `Filename`.pages.inc
-
 snippet newmod
+	<?php
 	/**
 	 * @file
 	 * The `Filename()` module.
@@ -69,6 +56,7 @@ snippet newmod
 	}
 
 snippet newinstall
+	<?php
 	/**
 	 * @file
 	 * The installer for `Filename()`.
