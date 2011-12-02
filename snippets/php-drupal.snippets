@@ -97,10 +97,13 @@ snippet ddump
 	drupal_set_message('<pre class="ddump">' . print_r(${1:$someVar}, TRUE) . '</pre>');${2}
 
 snippet jdump
-	drupal_set_message('<script>if (console.log) {
+	drupal_add_js('if (console.log) {
 	    console.log("' . __FILE__ . ' ' . __LINE__ . ': ' . __FUNCTION__ . '");
 		  console.log(' . json_encode(${1:$someVar}) . ');
-		}</script>');${2}
+		}', 'inline');${2}
+
+snippet jlog
+	drupal_add_js('console.log(' . ${1:__FUNCTION__} . ');', 'inline');${2}
 
 # For the t() function, the php.snippet that ships with snipMate defines
 # a t target that (unfortunately) expands to a ternary. We try to override, 
