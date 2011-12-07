@@ -12,13 +12,13 @@ snippet mi
 
 snippet menu_item
 	$items['${1}'] = array(
-		'title' => '${2}',
-		'page callback' => '${3}',
-		'page arguments' => array('${4}'),
-		'access arguments' => array('${5}'),
-		'type' => ${6},
-		'file' => ${7},${8}
-	);
+	  'title' => '${2:Page title}',
+	  'page callback' => '${3:callback_function}',
+	  'page arguments' => array(${4}),
+	  'access arguments' => array('${5:View published content}'),
+	  'type' => ${6:MENU_NORMAL_ITEM}, // MENU_CALLBACK, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK, MENU_LOCAL_ACTION, MENU_SUGGESTED_ITEM,
+	  // 'file' => ${7:`Filename()`.pages.inc},
+	);${8}
 
 snippet blocki
 	$blocks['${1:machine_name}'] = array(
@@ -4030,13 +4030,13 @@ snippet hook_menu
 	   *  'type' => MENU_SUGGESTED_ITEM,
 	   *);
 	   */
-	  $items['${1}'] = array(
-	    'title' => '${2}',
-	    'page callback' => '${3}',
+	  $items['${1:path/to/register}'] = array(
+	    'title' => '${2:Page title}',
+	    'page callback' => '${3:callback_function}',
 	    'page arguments' => array(${4}),
-	    'access arguments' => array('${5}'),
-	    'type' => ${6},
-	    'file' => ${7},
+	    'access arguments' => array('${5:View published content}'),
+	    'type' => ${6:MENU_NORMAL_ITEM}, // MENU_CALLBACK, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK, MENU_LOCAL_ACTION, MENU_SUGGESTED_ITEM,
+	    // 'file' => ${7:`Filename()`.pages.inc},
 	  );
 	
 	  return $items;
