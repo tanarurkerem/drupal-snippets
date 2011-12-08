@@ -1,5 +1,13 @@
 # DRUPAL shortcuts
 # menu item
+
+snippet link
+	array(
+		'#type' => 'link',
+		'#title' => ${1:'title'},
+		'#href' => ${2:'node/1'},
+	);
+
 snippet mi
 	$items['${1}'] = array(
 		'title' => '${2}',
