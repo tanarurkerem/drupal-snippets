@@ -9,12 +9,8 @@ let s:snipMate['scope_aliases'] = get(s:snipMate,'scope_aliases',{'php' :'drupal
 if has("autocmd")
   " Drupal php files.
   augroup module
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-    autocmd BufRead,BufNewFile *.inc set filetype=php
-    autocmd BufRead,BufNewFile *.profile set filetype=php
-    autocmd BufRead,BufNewFile *.make set filetype=dosini
+    autocmd BufRead,BufNewFile *.{module,install,test,inc,profile} set filetype=php
+    autocmd BufRead,BufNewFile *.{info,make} set filetype=dosini
   augroup END
 endif
 " vim:noet:sw=4:ts=4:ft=vim
