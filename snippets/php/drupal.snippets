@@ -434,6 +434,13 @@ snippet fapi_weight
 	${5}
 
 # DRUPAL 7 Hooks
+snippet hook
+	/**
+	 * ${3:A hook invocation.}
+	 */
+	function `DrupalFilename()`_${1:name}(${2}) {
+		${4}
+	}
 snippet form_id_alter
 	/**
 	 * Implements hook_form_FORM_ID_alter().
