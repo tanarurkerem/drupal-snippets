@@ -129,7 +129,19 @@ snippet tt
 # have tt overridden. (It's easier to type t() than t<tab>1)
 snippet ttt
 	t('${1:With %foo}', array(${2:'%foo' => 'bar'}))${3}
-
+# CONSTANTS
+snippet MENU_ NORMAL_ITEM
+	MENU_NORMAL_ITEM
+snippet MENU_ SUGGESTED_ITEM
+	MENU_SUGGESTED_ITEM
+snippet MENU_ LOCAL_ACTION
+	MENU_LOCAL_ACTION
+snippet MENU_ LOCAL_TASK
+	MENU_LOCAL_TASK
+snippet MENU_ DEFAULT_LOCAL_TASK
+	MENU_DEFAULT_LOCAL_TASK
+snippet MENU_ CALLBACK
+	MENU_CALLBACK
 # FAPI for Drupal 7
 # form item
 snippet fi
@@ -408,7 +420,6 @@ snippet fapi_textfield
 		//'#default_value' => 'some string',
 	);
 	${7}
-
 
 snippet fapi_value
 	$form[${1:name}] = array(
