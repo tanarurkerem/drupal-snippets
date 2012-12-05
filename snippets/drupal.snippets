@@ -9244,3 +9244,9 @@ snippet name
 	version = 7.x-1.0
 	;dependencies[] =
 	;files[] =
+# debugging functions
+snippet wd
+	watchdog(${1: Name }, ${2: $message });
+
+snippet wda
+	watchdog('${1: Name }', '<pre>' . var_export(${2: $message }, TRUE) . '</pre');
