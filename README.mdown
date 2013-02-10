@@ -1,0 +1,88 @@
+# Vim snippets for Drupal 7
+
+This VIM plugin provides Drupal snippets (and minimal configuration) for 
+coding Drupal modules and themes.
+
+## Dependencies
+
+This VIM plugin uses VIM-Snipmate.
+
+It is primarily tested using Janus:
+
+  * https://github.com/carlhuda/janus
+
+The original version was developed using Pathogen and VIM-Snippets (both
+of which are part of Janus):
+
+  * pathogen https://github.com/tpope/vim-pathogen
+  * snipMate fork made by garbas https://github.com/garbas/vim-snipmate
+
+## Janus Install
+
+To begin, you may need to create `~/.janus`. From there, it's a matter
+of cloning this repository:
+
+```bash
+$ cd ~/.janus
+$ git clone git://github.com/technosophos/drupal-snippets.git
+```
+
+You may need to restart VIM so the new module can load.
+
+## Standard (pathogen) install:
+
+Clone the repo in to the ~/.vim/bundle directory.
+
+```bash
+$ cd ~/.vim/bundle
+$ git clone git://github.com/technosophos/drupal-snippets.git
+```
+
+## USAGE
+
+This package providers hundreds of Drupal snippets.
+
+### Starters
+
+To start a new `*.module` file, open the empty file and type `newmod`.
+This will create the necessary module structure.
+
+Similarly, other files can be scaffolded:
+
+- `newinc`: Start a new inc file.
+- `newinstall`: Scaffold an install file
+- `newinfo`: Start a new info file (only works if the extension is
+  `.info`).
+
+
+### Hooks:
+
+All core Drupal 7 hook are provided in this package.
+
+ - Type `hook_HOOKNAME*<tab>*` for annotated snippets. These often contain
+   additional data structures (like menu items).
+ - Type `h_HOOKNAME*<tab>*` for the non-annotated versions.
+ - `hook` with no name will stub a generic hook callback.
+
+### FAPI and Other Structures
+
+- `fi` and `fapi` generate basic form items.
+- For FAPI field types, type fapi_FIELDTYPE*<tab>*. Example:
+   `fapi_textarea` expands to a full text area definition.
+- `mi` and `menu_item` expand to menu item arrays.
+- `blocki` and `block_item` expand to block items
+
+### Utilities:
+
+- `t`, `tt`, and `ttt` expand to form various flavors of `t()`. (Note
+  that `t` may be overridden by the PHP snipmate-snippets file).
+- `link` expands to an `l()` function.
+- `watchd` and `watchedog [ERROR|NOTICE|WARNING]` expand to various
+  expansions of `watchdog()`.
+- `dsm` expands to `drupal_set_message()`.
+- `ddump`, `jdump`, and `jlog` provide methods of dumping variables.
+- `d.o` expands to `http://drupal.org`.
+
+## Documentation
+
+Basic documentation is present in the `doc/` folder.
