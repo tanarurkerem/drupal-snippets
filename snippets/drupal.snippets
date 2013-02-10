@@ -9234,3 +9234,19 @@ snippet hook_update_N
 
 	  return $ret;
 	}
+# info file
+snippet name
+	name = ${1: Name }
+	description = ${2: Description}
+	core = 7.x
+	package = ${3: Package}
+	php = 5.2.4
+	version = 7.x-1.0
+	;dependencies[] =
+	;files[] =
+# debugging functions
+snippet wd
+	watchdog(${1: Name }, ${2: $message });
+
+snippet wda
+	watchdog('${1: Name }', '<pre>' . var_export(\${2: $message }, TRUE) . '</pre');
