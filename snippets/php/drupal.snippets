@@ -371,16 +371,14 @@ snippet fapi_radios
 snippet fapi_select
 	$form[${1:name}] = array(
 		'#type' => 'select',
-		'#title' => t('${2:title}')
+		'#title' => t('${2:title}'),
 		'#description' => t('${3:short description}'),
 		'#options' => array(
 			'${4:return_value}' => t('${5:Display value}'),
-		)
+		),
 		'#default_value' => ${7:'some_option_name'},
 	);
 	${8}
-
-
 snippet fapi_submit
 	$form[${1:name}] = array(
 		'#type' => 'submit',
@@ -433,8 +431,6 @@ snippet fapi_textfield
 		'#maxlength' => ${5:128},${6}
 		//'#default_value' => 'some string',
 	);
-	${7}
-
 snippet fapi_value
 	$form[${1:name}] = array(
 		'#type' => 'value',
