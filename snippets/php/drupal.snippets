@@ -9693,3 +9693,12 @@ snippet wd
 
 snippet wda
 	watchdog('${1: Name }', '<pre>' . var_export(\${2: $message }, TRUE) . '</pre');
+#views snippets
+snippet v_post_render
+	/**
+	 * Implements hook_views_post_render();
+	 */
+	function `DrupalFilename()`_views_post_render(&$view, &$output, &$cache) {
+		${1:// Your code here}
+	}
+
