@@ -9699,6 +9699,16 @@ snippet v_post_render
 	 * Implements hook_views_post_render();
 	 */
 	function `DrupalFilename()`_views_post_render(&$view, &$output, &$cache) {
-		${1:// Your code here}
+	  if ($view->name === '${1:name}' && $view->current_display === '${2:name}') {
+		${3:// Your code here}
+	  }
 	}
-
+snippet v_pre_render
+	/**
+	 * Implements hook_views_pre_render();
+	 */
+	function kuba_directory_views_pre_render(&$view) {
+	  if ($view->name === '${1:name}' && $view->current_display === '${2:name}') {
+		${3:// Your code here}
+	  }
+	}
