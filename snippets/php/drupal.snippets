@@ -9724,6 +9724,9 @@ snippet v_pre_render
 	}
 #theme overide snippets
 snippet t_status_messages
+	/**
+	 * overrides theme_status_message($variables);
+	 */
 	function `DrupalFilename()`_status_messages($variables) {
 		$display = $variables['display'];
 		$output = '';
