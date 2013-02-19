@@ -9716,7 +9716,7 @@ snippet wd
 	watchdog(${1: Name }, ${2: $message });
 
 snippet wda
-	watchdog('${1: Name }', '<pre>' . var_export(\${2: $message }, TRUE) . '</pre');
+	watchdog('${1: Name }', '<pre>' . var_export(${2: $message }, TRUE) . '</pre');
 #views snippets
 snippet v_post_render
 	/**
