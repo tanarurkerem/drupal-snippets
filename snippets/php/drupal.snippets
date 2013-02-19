@@ -9771,3 +9771,40 @@ snippet t_status_messages
 		}
 		return $output;
 	}
+#EntittFieldQuery functions
+snippet efq_entityCondition
+	->entityCondition(${1:name}, ${2: value}, ${3: operator = NULL})
+snippet efq_fieldCondition
+	->fieldCondition(${1: field}, ${2: column = NULL}, ${3: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+snippet efq_fieldLanguageCondition
+	->fieldLanguageCondition(${1: field}, ${1: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+snippet efq_fieldDeltaCondition
+	->fieldDeltaCondition(${1: field}, ${1: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+snippet efq_propertyCondition
+	->propertyCondition(${1: column}, ${1: value}, ${1: operator} = NULL)
+snippet efq_entityOrderBy
+	->entityOrderBy('${1: name}', '${2:$direction = 'ASC'}')
+snippet efq_fieldOrderBy
+	->fieldOrderBy(${1: field}, ${1: column}, ${1: direction} = 'ASC')
+snippet efq_propertyOrderBy
+	->propertyOrderBy(${1: column}, ${1: direction} = 'ASC')
+snippet efq_count
+	->count()
+snippet efq_range
+	->range(${1: start} = NULL, ${1: length} = NULL)
+snippet efq_pager
+	->pager(${1: limit} = 10, ${1: element} = NULL)
+snippet efq_tableSort
+	->tableSort(&${1: headers})
+snippet efq_deleted
+	->deleted(${1: deleted} = TRUE)
+snippet efq_age
+	->age(${1: age})
+snippet efq_addTag
+	->addTag(${1: tag})
+snippet efq_addMetaData
+	->addMetaData(${1: key}, ${1: object})
+snippet efq_queryCallback
+	->queryCallback()
+snippet efq_addCondition
+	->addCondition(SelectQuery ${1: select_query}, ${1: sql_field}, ${1: condition}, ${1: having} = FALSE)
