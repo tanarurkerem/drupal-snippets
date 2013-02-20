@@ -9775,36 +9775,36 @@ snippet t_status_messages
 snippet efq_entityCondition
 	->entityCondition(${1:name}, ${2: value}, ${3: operator = NULL})
 snippet efq_fieldCondition
-	->fieldCondition(${1: field}, ${2: column = NULL}, ${3: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+	->fieldCondition(${1: field}, ${2: column = NULL}, ${3: value = NULL}, ${3: operator = NULL, ${4: delta_group = NULL}, ${5: language_group = NULL})
 snippet efq_fieldLanguageCondition
-	->fieldLanguageCondition(${1: field}, ${1: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+	->fieldLanguageCondition(${1: field}, ${2: value = NULL, $operator = NULL, $delta_group = NULL, $language_group = NULL})
 snippet efq_fieldDeltaCondition
-	->fieldDeltaCondition(${1: field}, ${1: value} = NULL, ${1: operator} = NULL, ${1: delta_group} = NULL, ${1: language_group} = NULL)
+	->fieldDeltaCondition(${1: field}, ${2:value = NULL, $1operator = NULL, $delta_group = NULL, $language_group = NULL})
 snippet efq_propertyCondition
-	->propertyCondition(${1: column}, ${1: value}, ${1: operator} = NULL)
+	->propertyCondition(${1: column}, ${2: value}, ${3: operator = NULL})
 snippet efq_entityOrderBy
-	->entityOrderBy('${1: name}', '${2:$direction = 'ASC'}')
+	->entityOrderBy('${1: name}', '${2:direction = 'ASC'}')
 snippet efq_fieldOrderBy
-	->fieldOrderBy(${1: field}, ${1: column}, ${1: direction} = 'ASC')
+	->fieldOrderBy(${1: field}, ${2: column}, ${3: direction = 'ASC'})
 snippet efq_propertyOrderBy
-	->propertyOrderBy(${1: column}, ${1: direction} = 'ASC')
+	->propertyOrderBy(${1: column}, ${2: direction = 'ASC'})
 snippet efq_count
 	->count()
 snippet efq_range
-	->range(${1: start} = NULL, ${1: length} = NULL)
+	->range(${1: start = NULL}, ${2: length = NULL})
 snippet efq_pager
-	->pager(${1: limit} = 10, ${1: element} = NULL)
+	->pager(${1: limit}, ${1: element = NULL})
 snippet efq_tableSort
 	->tableSort(&${1: headers})
 snippet efq_deleted
-	->deleted(${1: deleted} = TRUE)
+	->deleted(${1: deleted = TRUE})
 snippet efq_age
 	->age(${1: age})
 snippet efq_addTag
 	->addTag(${1: tag})
 snippet efq_addMetaData
-	->addMetaData(${1: key}, ${1: object})
+	->addMetaData(${1: key}, ${2: object})
 snippet efq_queryCallback
 	->queryCallback()
 snippet efq_addCondition
-	->addCondition(SelectQuery ${1: select_query}, ${1: sql_field}, ${1: condition}, ${1: having} = FALSE)
+	->addCondition(SelectQuery ${1: select_query}, ${2: sql_field}, ${3: condition}, ${4: having = FALSE})
