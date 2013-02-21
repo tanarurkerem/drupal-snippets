@@ -226,13 +226,24 @@ snippet fapi_container
 snippet fapi_date
 	$form[${1:name}] = array(
 		'#type' => 'date',
-		'#title' = t('${2:title}'),
+		'#title' => t('${2:title}'),
 		'#description' => t('${3:short description}'),
 		//'#default_value' => NOW,
 	);
 	${4}
-
-
+snippet fapi_date_popup
+	$form[${1:name}] = array(
+		'#type' => 'date_popup',
+		'#title' => t('${2:title}'),
+		'#description' => t('${3:short description}'),
+		'#date_type' => DATE_UNIX,
+		'#date_timezone' => date_default_timezone(),
+		'#date_format' => ${4:'Y/m/d'},
+		'#date_increment' => 1,
+		'#date_year_range' => '-10:0',
+		//'#default_value' => NOW,
+	);
+	${5}
 snippet fapi_fieldset
 	$form[${1:name}] = array(
 		'#type' => 'fieldset',
