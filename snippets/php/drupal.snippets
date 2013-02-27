@@ -135,6 +135,7 @@ snippet ttt
 	t('${1:With %foo}', array(${2:'%foo' => 'bar'}))${3}
 snippet fge
 	field_get_item('${1:node}', ${2:\$node}, ${3:'field_'})${4}
+#general drupal functions (that generally start with d
 # CONSTANTS
 snippet MENU_ NORMAL_ITEM
 	MENU_NORMAL_ITEM
@@ -1223,6 +1224,15 @@ snippet h_query_alter
 	function `DrupalFilename()`_query_alter(QueryAlterableInterface $query) {
 	  if ($query->hasTag('${1}')) {
 	    ${2:/* Your code here */}
+	  }
+	}
+snippet h_query_TAG_alter
+	/**
+	 * Implements hook_query_TAG_alter().
+	 */
+	function `DrupalFilename()`_query_${1}_alter(QueryAlterableInterface $query) {
+	  if ($query->hasTag('${2}')) {
+	    ${3:/* Your code here */}
 	  }
 	}
 snippet h_install
@@ -9714,16 +9724,6 @@ snippet hook_update_N
 
 	  return $ret;
 	}
-# info file
-snippet name
-	name = ${1: Name }
-	description = ${2: Description}
-	core = 7.x
-	package = ${3: Package}
-	php = 5.2.4
-	version = 7.x-1.0
-	;dependencies[] =
-	;files[] =
 # debugging functions
 snippet wd
 	watchdog(${1: Name }, ${2: $message });
@@ -9782,7 +9782,7 @@ snippet t_status_messages
 		}
 		return $output;
 	}
-#EntittFieldQuery functions
+#EntityFieldQuery functions
 snippet efq_entityCondition
 	->entityCondition(${1:name}, ${2: value}, ${3: operator = NULL})
 snippet efq_fieldCondition
