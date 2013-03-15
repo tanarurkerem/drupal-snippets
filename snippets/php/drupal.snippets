@@ -1231,10 +1231,10 @@ snippet h_query_TAG_alter
 	 * Implements hook_query_TAG_alter().
 	 */
 	function `DrupalFilename()`_query_${1}_alter(QueryAlterableInterface $query) {
-	  if ($query->hasTag('${2}')) {
-	    ${3:/* Your code here */}
-	  }
+		${2:/* Your code here */}
 	}
+	
+	${3}
 snippet h_install
 	/**
 	 * Implements hook_install().
