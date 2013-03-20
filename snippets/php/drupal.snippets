@@ -4,10 +4,15 @@
 snippet link
 	array(
 		'#type' => 'link',
-		'#title' => ${1:'title'},
-		'#href' => ${2:'node/1'},
+		'#text' => ${1:'title'},
+		'#path' => ${2:'node/1'},
+		'#options' => array(
+			'attributes' => array('class' => array(${3:'class'})),
+			//REQUIRED:
+			'html' => FALSE,
+		),
 	);
-
+	${4}
 snippet l()
 	l(${1:'text'}, ${2:'path'}, $options = array());
 snippet mi
