@@ -141,6 +141,9 @@ snippet ttt
 snippet fge
 	field_get_item('${1:node}', ${2:\$node}, ${3:'field_'})${4}
 #general drupal functions (that generally start with d
+snippet me
+	module_enable(array('${1:module name per entriy}',));
+
 # CONSTANTS
 snippet MENU_ NORMAL_ITEM
 	MENU_NORMAL_ITEM
@@ -3527,10 +3530,9 @@ snippet h_language_fallback_candidates_alter
 	}
 snippet h_update_N
 	/**
-	 * Implements hook_update_N().
+	 * ${1:/* Update Messege */}
 	 */
-	function `DrupalFilename()`_update_${1:/* Update number */}(&$sandbox = NULL) {
-	  $ret = t('${2:/* Message */}');
+	function `DrupalFilename()`_update_${2:/* Update number */}(&$sandbox = NULL) {
 
 	  ${3:/* Your code here */}
 
@@ -9824,3 +9826,4 @@ snippet efq_queryCallback
 	->queryCallback()
 snippet efq_addCondition
 	->addCondition(SelectQuery ${1: select_query}, ${2: sql_field}, ${3: condition}, ${4: having = FALSE})
+
