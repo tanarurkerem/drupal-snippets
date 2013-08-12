@@ -1,0 +1,9 @@
+# Drupal JavaScript Shortcuts
+snippet behaviors
+	(function ($) {
+		Drupal.behaviors.${1:`DrupalFilename()`} = {
+			attach: function (context, settings) {
+				$(${2:''});
+			}
+		};
+	})(jQuery);
