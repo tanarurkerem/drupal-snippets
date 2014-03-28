@@ -1,35 +1,14 @@
 # Vim snippets for Drupal 7
 
-This VIM plugin provides Drupal snippets (and minimal configuration) for 
-coding Drupal modules and themes.
+## Standard (Vundle) install:
 
-## Dependencies
-
-This VIM plugin uses VIM-Snipmate.
-
-It is primarily tested using Janus:
-
-  * https://github.com/carlhuda/janus
-
-The original version was developed using Pathogen and VIM-Snippets (both
-of which are part of Janus):
-
-  * pathogen https://github.com/tpope/vim-pathogen
-  * snipMate fork made by garbas https://github.com/garbas/vim-snipmate
-
-## Janus Install
-
-To begin, you may need to create `~/.janus`. From there, it's a matter
-of cloning this repository:
-
-```bash
-$ cd ~/.janus
-$ git clone git://github.com/technosophos/drupal-snippets.git
+Add the following to .vimrc:
 ```
+Bundle 'sanguis/drupal-snippets'
+```
+Then run `:BundleInstall`
 
-You may need to restart VIM so the new module can load.
-
-## Standard (pathogen) install:
+## Pathogen install:
 
 Clone the repo in to the ~/.vim/bundle directory.
 
