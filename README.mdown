@@ -1,13 +1,5 @@
 # Vim snippets for Drupal 7
 
-## Standard (Vundle) install:
-
-Add the following to .vimrc:
-```
-Bundle 'sanguis/drupal-snippets'
-```
-Then run `:BundleInstall`
-
 ## Pathogen install:
 
 Clone the repo in to the ~/.vim/bundle directory.
@@ -16,6 +8,14 @@ Clone the repo in to the ~/.vim/bundle directory.
 $ cd ~/.vim/bundle
 $ git clone git://github.com/technosophos/drupal-snippets.git
 ```
+
+## Vundle install:
+
+Add the following to .vimrc:
+```
+Bundle 'sanguis/drupal-snippets'
+```
+Then run `:BundleInstall`
 
 ## USAGE
 
