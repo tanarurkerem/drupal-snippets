@@ -118,8 +118,12 @@ watchdog('${1:module}', '${2:Message from %func}', array(${3:'%func' => __FUNCTI
 endsnippet
 
 # debugging functions
+snippet wd "wd"
+watchdog(${1:`!v DrupalFilename()`}, ${2: $message });
+endsnippet
+
 snippet wda "wda"
-watchdog('${1: Name }', '<pre>' . var_export(\${2: $message }, TRUE) . '</pre');
+watchdog('${1:`!v DrupalFilename()`}', '<pre>' . var_export(${2:$message}, TRUE) . '</pre>');
 endsnippet
 
 snippet dsm "dsm"
@@ -11052,15 +11056,6 @@ function `!v DrupalFilename()`_update_${1:/* Update number */}(&$sandbox = NULL)
   ${3:/* Your code here */}
   return $ret;
 }
-endsnippet
-
-# debugging functions
-snippet wd "wd"
-watchdog(${1: Name }, ${2: $message });
-endsnippet
-
-snippet wda "wda"
-watchdog('${1:`!v DrupalFilename()`}', '<pre>' . var_export(${2:$message}, TRUE) . '</pre>');
 endsnippet
 
 #views snippets
