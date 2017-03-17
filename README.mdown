@@ -1,5 +1,7 @@
 # Vim snippets for Drupal 7
 
+[![Stability: Unsupported](https://masterminds.github.io/stability/unsupported.svg)](https://masterminds.github.io/stability/unsupported.html)
+
 This VIM plugin provides Drupal snippets (and minimal configuration) for 
 coding Drupal modules and themes.
 
